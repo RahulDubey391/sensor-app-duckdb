@@ -26,7 +26,16 @@ Only the aggregation part of the program is tested to check the above metrics. S
 
 ### Environment Setup
 #### VM Instance Setup
-For our experiment and as of any real-world application, we are deploying/testing the application in the Cloud Environment. Since this code is not tested on real IOT device, we'll constrain the VM Instance to lower-end of specification.
+For our experiment and as of any real-world application, we are deploying/testing the application in the Cloud Environment. Since this code is not tested on real IOT device, we'll constrain the VM Instance to lower-end of specification. 
+
+For our case, the low-tier VM instance is chosen from the Google Compute Engine service with following specification:
+* Memory - 1 GB
+* vCPU/Core - 1/1
+* Disk Space - 10 GB
+
+The Disk Space is kept high since the HDDs/SSDs are cheaper than memory and usually on the higher range for IOT devices. The intention is to utilize the Disk Space as much as possible to utilize filesystem's capabilities.
 
 #### Docker Setup
-Application is tested in the docker environment to isolate other OS processes and utilize the resources assigned up-to it's full potential.
+Application is tested in the docker environment to isolate other OS processes and to facilitate the full utilization of the resources assigned. Although Docker itself incurs some runtime memory overhead, but we'll ignore it's resource utilization. The Applicaiton is containerized and deployed using the Dockerfile provided with the code base. Since the Google Compute Engine service requires custom mapping for external exposure of IP addresses, we are just utilizing the local access to test the runtime footprint.
+
+
