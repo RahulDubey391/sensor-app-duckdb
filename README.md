@@ -18,4 +18,15 @@ The data is merely a mockup for Sensor Device generation data for each second. T
 The primary intention is to check the feasibility of DuckDB for Industrial IOT where the end-users are the operators of the application deployed at the edge. Refer to Experiment section to get more on the applicability of DuckDB as an alternative to custom written aggregator service.
 
 ## Experiment
-The 
+The experiment is intended to check the following metrics for the ad-hocs query processing over the data:
+* In-process Memory footprint (MB)
+* Query Processing Time/Latency (in Milliseconds)
+
+Only the aggregation part of the program is tested to check the above metrics. Since Streamlit UI adds overhead for rendering components, we are leaving out the UI runtime.
+
+### Environment Setup
+#### VM Instance Setup
+For our experiment and as of any real-world application, we are deploying/testing the application in the Cloud Environment. Since this code is not tested on real IOT device, we'll constrain the VM Instance to lower-end of specification.
+
+#### Docker Setup
+Application is tested in the docker environment to isolate other OS processes and utilize the resources assigned up-to it's full potential.
