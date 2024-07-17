@@ -38,4 +38,8 @@ The Disk Space is kept high since the HDDs/SSDs are cheaper than memory and usua
 #### Docker Setup
 Application is tested in the docker environment to isolate other OS processes and to facilitate the full utilization of the resources assigned. Although Docker itself incurs some runtime memory overhead, but we'll ignore it's resource utilization. The Applicaiton is containerized and deployed using the Dockerfile provided with the code base. Since the Google Compute Engine service requires custom mapping for external exposure of IP addresses, we are just utilizing the local access to test the runtime footprint.
 
+Specification for Docker Container:
+* Lightweight with fraction of 1 GB Memory and 1 vCPU
+* Mounted Volume with the data to be processed
+* 
 
