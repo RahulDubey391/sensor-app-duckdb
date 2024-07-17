@@ -1,0 +1,8 @@
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+sudo docker build --no-cache -t sensor-app .
+sudo docker run -d -p 4000:80 -v /home/user/sensor_readings:/app/sensor_readings sensor-app
+sudo docker logs <CONTAINER_ID>
