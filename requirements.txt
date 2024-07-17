@@ -1,0 +1,5 @@
+pandas
+pyarrow
+duckdb
+memory_profiler
+streamlit
