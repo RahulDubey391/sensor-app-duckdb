@@ -15,7 +15,7 @@ The application is written in Python and contains the code snippet for the follo
 ## Data in question
 The data is merely a mockup for Sensor Device generation data for each second. This interval can be change to generate at Millisecond, Nanosecond, Minute, Hours etc in the data generator script. Although DuckDB has another way to write/read in separate threads to al least simulate the streaming of data. But the intention of the above app is to just check how much time it takes to run quries against data stored in filesystem.
 
-The primary intention is to check the feasibility of DuckDB for Industrial IOT where the end-users are the operators of the application deployed at the edge. Refer to Experiment section to get more on the applicability of DuckDB as an alternative to custom written aggregator service.
+The primary intention is to check the feasibility of DuckDB for IOT devices in industrial applications where the end-users are the operations team members. Refer to Experiment section to get more on the applicability of DuckDB as an alternative to custom written aggregator service.
 
 The dataset is partitioned at date level and follows the Hive Partitioning strategy. Also the phyical storage of data is in Apache Parquet format since DuckDB exploits the metadata at file level to reduce seek time for the qureries using Row Group/Column Chunk level statistics.
 
