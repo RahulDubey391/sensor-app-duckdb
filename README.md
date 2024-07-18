@@ -1,3 +1,5 @@
+![DuckDB_with_GCP_Docker](https://github.com/user-attachments/assets/b71d263a-de0e-4ee3-8111-c3324e04e800)
+
 # sensor-app-duckdb
 Naive demonstration on using DuckDB as a data processing engine for Sensor Device applications with low-end resources
 
